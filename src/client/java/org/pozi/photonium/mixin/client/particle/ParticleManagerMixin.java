@@ -15,12 +15,11 @@ public class ParticleManagerMixin {
     public void addParticle(Particle particle, CallbackInfo ci) {
         Entity cameraEntity = MinecraftClient.getInstance().getCameraEntity();
         if (cameraEntity != null) {
-            // getX(), getY(), getZ() kullanımı sürüm bağımsız en güvenli yoldur.
             double x = particle.getBoundingBox().getCenter().x;
             double y = particle.getBoundingBox().getCenter().y;
             double z = particle.getBoundingBox().getCenter().z;
 
-            if (cameraEntity.squaredDistanceTo(x, y, z) > 1024.0D) { // 32 Blok mesafe sınırı
+            if (cameraEntity.squaredDistanceTo(x, y, z) > 1024.0D) {
                 ci.cancel();
             }
         }
