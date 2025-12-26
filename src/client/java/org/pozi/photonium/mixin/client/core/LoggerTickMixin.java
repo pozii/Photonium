@@ -12,7 +12,6 @@ public class LoggerTickMixin {
 
     @Inject(method = "tick", at = @At("HEAD"))
     private void onTick(CallbackInfo ci) {
-        // Her oyun döngüsünde raporlama sistemini güncelle
         PhotoniumLogger.tick();
     }
 }
