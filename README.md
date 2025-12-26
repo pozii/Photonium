@@ -4,7 +4,7 @@
   <strong>Seamless Gameplay, Zero Compromise</strong>
   <br><br>
   
-  <a href="https://github.com/YourUsername/Photonium/releases">
+  <a href="https://github.com/pozii/Photonium/releases">
     <img src="https://img.shields.io/github/v/release/pozii/Photonium?style=flat-square&color=orange" alt="Latest Release">
   </a>
   <img src="https://img.shields.io/badge/Loader-Fabric-bebebe?style=flat-square&logo=fabric" alt="Fabric">
