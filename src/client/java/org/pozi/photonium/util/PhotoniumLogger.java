@@ -6,24 +6,19 @@ import org.slf4j.LoggerFactory;
 public class PhotoniumLogger {
     private static final Logger LOGGER = LoggerFactory.getLogger("Photonium Optimizer");
 
-    // Sayaçlar
     private static int sleepingItems = 0;
     private static int frozenEntities = 0;
     private static int mergedXpOrbs = 0;
 
-    // Zamanlayıcı (Tick)
     private static int timer = 0;
 
-    // Mixin'lerin çağıracağı metotlar
     public static void logItemSleep() { sleepingItems++; }
     public static void logEntityFreeze() { frozenEntities++; }
     public static void logXpMerge() { mergedXpOrbs++; }
 
-    // Oyunun her karesinde (Tick) çağrılacak metot
     public static void tick() {
         timer++;
 
-        // 600 Tick = 30 Saniye (Minecraft saniyede 20 tick çalışır)
         if (timer >= 600) {
             printReport();
             reset();
@@ -31,7 +26,6 @@ public class PhotoniumLogger {
     }
 
     private static void printReport() {
-        // Eğer hiçbir şey yapmadıysak log atma (Temizlik)
         if (sleepingItems == 0 && frozenEntities == 0 && mergedXpOrbs == 0) {
             return;
         }
