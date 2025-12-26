@@ -1,0 +1,40 @@
+{
+  "schemaVersion": 1,
+  "id": "photonium",
+  "version": "${version}",
+  "name": "Photonium",
+  "description": "A high-performance optimization mod designed to increase FPS and reduce rendering lag without compromising visual fidelity or gameplay mechanics. Photonium optimizes entity culling, particle rendering, and system resource management.",
+  "authors": [
+    "Pozii"
+  ],
+  "contact": {
+    "homepage": "https://modrinth.com/mod/photonium",
+    "sources": "https://github.com/Pozii/Photonium"
+  },
+  "license": "Apache-2.0",
+  "icon": "assets/photonium/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "org.pozi.photonium.Photonium"
+    ],
+    "client": [
+      "org.pozi.photonium.client.PhotoniumClient"
+    ]
+  },
+  "mixins": [
+    "photonium.mixins.json",
+    {
+      "config": "photonium.client.mixins.json",
+      "environment": "client"
+    }
+  ],
+  "depends": {
+    "fabricloader": ">=0.14.21",
+    "minecraft": "~1.21",
+    "java": ">=21"
+  },
+  "suggests": {
+    "another-mod": "*"
+  }
+}

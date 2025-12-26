@@ -1,0 +1,26 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "org.pozi.photonium.mixin.client",
+  "compatibilityLevel": "JAVA_21",
+  "client": [
+    "render.EntityRendererMixin",
+    "particle.ParticleManagerMixin",
+    "world.ClientChunkManagerMixin",
+    "render.RenderSystemMixin",
+    "memory.MemoryLeakFixMixin",
+    "memory.WorldTransitionMemoryMixin",
+    "memory.ResourceReloadMemoryMixin",
+    "entity.EntityTickMixin",
+    "entity.FastItemSleepMixin",
+    "core.WorldJoinLagFixMixin",
+    "entity.ExperienceOrbMergeMixin",
+    "core.LoggerTickMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  },
+  "overwrites": {
+    "requireAnnotations": true
+  }
+}

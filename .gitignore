@@ -1,0 +1,23 @@
+# --- Gradle (Derleme Çöpü) ---
+.gradle/
+build/
+bin/
+out/
+
+# --- IDE Ayarları (Kişisel Ayarlar) ---
+.idea/
+.vscode/
+*.iml
+*.ipr
+*.iws
+.settings/
+.classpath
+.project
+
+# --- Minecraft Test Alanı (ÇOK ÖNEMLİ) ---
+# Burayı yüklersek kendi save dosyalarınız, loglarınız da gider.
+run/
+
+# --- Sistem Dosyaları ---
+.DS_Store
+Thumbs.db
